@@ -1,0 +1,5 @@
+@import "src/css/theme.css"; 
+@import "src/css/custom/base.css";
+@import "src/css/custom/utilities.css";
+
+@import "tailwindcss";

@@ -1,0 +1,19 @@
+---
+import "/global.css"
+export interface indexProps{
+    titlePage: string;
+}
+
+const { titlePage } = Astro.props as indexProps;
+---
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>{ titlePage }| @Jeisonmr</title>
+</head>
+<body>
+    <slot  />
+</body>
+</html>

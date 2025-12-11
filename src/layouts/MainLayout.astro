@@ -1,0 +1,26 @@
+---
+import { ClientRouter } from "astro:transitions";
+import Header from "../components/header/Header.astro";
+import "./global.css";
+
+interface MainLayoutProps {
+    pageTitle?: string;
+}
+
+const {  pageTitle } = Astro.props as MainLayoutProps;
+
+---
+
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>{pageTitle}</title>
+    <ClientRouter />
+</head>
+<body>
+    <Header/>
+    <slot />
+</body>
+</html>

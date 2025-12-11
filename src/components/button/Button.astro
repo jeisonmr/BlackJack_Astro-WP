@@ -1,0 +1,30 @@
+---
+import { Image } from "astro:assets";
+
+interface Button {
+  label?: string;
+  id?: number;
+  icon?: string;
+  classes?: string;
+}
+
+
+
+const { label, id, icon, classes } = Astro.props;
+
+console.log(icon)
+---
+
+<button id={id} class={classes}>
+  <figure>
+    <Image
+      src={icon}
+      alt=""
+      width={icon.width}
+      height={icon.height}
+    />
+    <figcaption>
+      {label}
+    </figcaption>
+  </figure>
+</button>

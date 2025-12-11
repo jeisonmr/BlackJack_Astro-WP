@@ -1,0 +1,17 @@
+---
+import Button from "../components/button/button.astro";
+import MainLayout from "../layouts/MainLayout.astro";
+import Card from "public/assets/images/icons/tarjeta.png";
+---
+
+<MainLayout pageTitle="Contact">
+	<section>
+		<h1 class="font-extrabold text-5xl text-red-600">Contact</h1>
+
+		<Button 
+			icon={Card}
+			label="HIT"
+			classes="btn-primary"
+		/>
+	</section>
+</MainLayout>

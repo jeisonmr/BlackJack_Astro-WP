@@ -1,0 +1,37 @@
+/* Tema de estilos de la app */
+@theme{
+    /* Spacing */
+    --spacing-1: 1rem;
+
+    /* Border radius */
+    --rounded-xs: 0.5rem;
+    --rounded-lg: 1rem;
+    --rounded-full: 100%;
+
+    /* Breakpoints */
+    --breakpoint-movil: 320px;
+    --breakpoint-tablet: 768px;
+    --breakpoint-sm: 1024px;
+    --breakpoint-md: 1280px;
+    --breakpoint-lg: 1440px;
+    --breakpoint-xl: 1920px;
+    --breakpoint-desktop: 1024px;
+    
+    /* Colors */
+
+    /* Principals */
+    --color-theme-white: #FFFFFF;
+    --color-theme-black: #000000;
+
+    --color-border1: #7b7d57;
+    --color-bg1: #2CFF0529;
+
+    /* Font sizes */
+    --text-txt-big: clamp(2.6rem, 4vw, 5.5rem);
+    --text-txt-head1: clamp(2.2rem, 2.5vw, 3.2rem);
+    --text-txt-head2: clamp(1.8rem, 2.5vw, 2.8rem);
+    --text-txt-head3: clamp(1.5rem, 1.3vw, 1.8rem);
+    --text-txt-paragraph: clamp(1.3rem, 1.3vw, 1.5rem);
+    --text-txt-label: clamp(1.4rem, 1vw, 1.4rem);
+    --text-txt-span: 1.2rem;
+}

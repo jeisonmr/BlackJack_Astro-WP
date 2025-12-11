@@ -1,0 +1,6 @@
+  .btn-primary {
+    @apply fill-transparent p-1 rounded-lg border border-border1 bg-bg1;
+    img{
+      @apply w-20 h-auto;
+    }
+  }

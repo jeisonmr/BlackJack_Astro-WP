@@ -1,0 +1,53 @@
+*,
+::after,
+::before,
+::backdrop,
+::file-selector-button {
+  box-sizing: border-box;
+  margin: 0;
+  padding: 0;
+  border: 0 solid;
+  text-decoration: none;
+  list-style: none;
+  interpolate-size: allow-keywords;
+}
+
+html {
+  font-size: 62.5%;
+  box-sizing: border-box;
+}
+
+body {
+  font-size: var(--text-txt-paragraph);
+  line-height: 1.1;
+  font-family: var(--font-primary-300);
+  
+  h1,h2,h3,h4,h5,h6{
+    line-height: 1;
+  }
+
+  p {
+    line-height: 1.1;
+    color: var(--color-gray)
+  }
+}
+.cntBlackJack{
+    height: 300px;
+    .cntPlayer{
+        display: flex;
+        img{
+            margin: 0 -3.5rem;
+            width: 150px;
+            height: auto;
+    
+            @media (max-width: 768px) {
+                width: 100px;
+                margin: 0 -2.2rem;
+            }
+        }
+    
+        img:first-child{
+            margin-left: 0;
+        }
+    }
+}
