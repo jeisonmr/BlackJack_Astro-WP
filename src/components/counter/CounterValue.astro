@@ -1,0 +1,14 @@
+---
+interface CounterValue{
+  count: number;
+  classes?: string;
+}
+
+const { count, clasess } = Astro.props;
+---
+
+<article class="counter-container">
+  <span class="counter-label">
+    {count}
+  </span>
+</article>

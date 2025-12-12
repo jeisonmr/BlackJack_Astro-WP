@@ -1,0 +1,15 @@
+---
+interface CounterTotalBetWin{
+  count:number;
+  counter_type: string;
+  classes?:string;
+}
+const { count, counter_type, classes } = Astro.props as CounterTotalBetWin;
+---
+
+<article class=`${classes} counter-total-container`>
+  <p class="counter-total-label">
+    <span> {`TOTAL ${counter_type}`}</span>
+    <span>{`$${count}`}</span>
+  </p>
+</article>

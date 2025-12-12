@@ -1,7 +1,7 @@
 /* Tema de estilos de la app */
 @theme{
     /* Spacing */
-    --spacing-1: 1rem;
+    --spacing: 1rem;
 
     /* Border radius */
     --rounded-xs: 0.5rem;
@@ -22,9 +22,12 @@
     /* Principals */
     --color-theme-white: #FFFFFF;
     --color-theme-black: #000000;
+    --color-primary: #FFD700;
 
-    --color-border1: #7b7d57;
-    --color-bg1: #2CFF0529;
+    --color-border1: #FFFF031A;
+    --color-border2: #FFD700;
+    --color-bg1: #39FF141A;
+    --color-bg2: #240000;
 
     /* Font sizes */
     --text-txt-big: clamp(2.6rem, 4vw, 5.5rem);

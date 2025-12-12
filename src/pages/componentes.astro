@@ -1,0 +1,135 @@
+---
+import Button from "components/button/Button.astro";
+import IconStand from "public/assets/images/icons/stand.webp";
+import IconHit from "public/assets/images/icons/hit.webp";
+import IconDouble from "public/assets/images/icons/double.webp";
+import IconAsk from "public/assets/images/icons/ask.webp";
+import MainLayout from "../layouts/MainLayout.astro";
+import CounterValue from "components/counter/CounterValue.astro";
+import CounterTotalBetWin from "components/counter/CounterTotalBetWin.astro";
+
+const blackjack = [
+  '2C', '2D', '2H', '2S',
+  '3C', '3D', '3H', '3S',
+  '4C', '4D', '4H', '4S',
+  '5C', '5D', '5H', '5S',
+  '6C', '6D', '6H', '6S',
+  '7C', '7D', '7H', '7S',
+  '8C', '8D', '8H', '8S',
+  '9C', '9D', '9H', '9S',
+  '10C', '10D', '10H', '10S',
+  'JC', 'JD', 'JH', 'JS',
+  'QC', 'QD', 'QH', 'QS',
+  'KC', 'KD', 'KH', 'KS',
+  'AC', 'AD', 'AH', 'AS'
+]
+
+const rootPathOne = 'public/assets/cards/classic_one/';
+const rootPathTwo = 'public/assets/cards/classic_two/';
+const rootPathFantasy = 'public/assets/cards/fantasy/';
+---
+
+<MainLayout pageTitle="Buttons">
+  <!-- Botones -->
+  <section class="flex flex-col gap-5 !mb-10">
+    <h1 class="text-txt-head1 font-extrabold text-center text-white">
+      Botones
+    </h1>
+
+    <div class="grid grid-cols-4 gap-20">
+      <Button
+        icon={IconHit}
+        label="HIT"
+        classes="btn-primary w-auto justify-self-center"
+      />
+
+      <Button
+        icon={IconStand}
+        label="STAND"
+        classes="btn-primary w-auto justify-self-center"
+      />
+
+      <Button
+        icon={IconDouble}
+        label="DOUBLE"
+        classes="btn-primary w-auto justify-self-center"
+      />
+
+      <Button
+        icon={IconAsk}
+        label=""
+        classes="btn-primary w-auto justify-self-center"
+      />
+    </div>
+  </section>
+
+  <!-- Contador -->
+   <section class="flex flex-col gap-5 !mb-10">
+    <h2 class="text-txt-head1 font-extrabold text-center text-white">
+      Contador
+    </h2>
+    <div class="flex justify-center items-center">
+      <CounterValue
+        count=14
+      />
+    </div>
+   </section>
+
+   <!-- Total Bet / Win -->
+   <section class="flex flex-col gap-5">
+    <h2 class="text-txt-head1 font-extrabold text-center text-white">
+      Totals Bet / Win
+    </h2>
+    <div class="grid grid-cols-2 justify-center items-center">
+      <CounterTotalBetWin
+        count=25000
+        counter_type="BET"
+        classes="w-auto justify-self-center"
+      />
+      <CounterTotalBetWin
+        count=10000
+        counter_type="WIN"
+        classes="w-auto justify-self-center"
+      />
+    </div>
+   </section>
+
+   <!-- ------------------------------------------- -->
+    
+   <!-- Elementos -->
+    <section class="element-card-container">
+      <h2>Cartas</h2>
+      <div class="card-type element-card-one">
+        <h3>Clasic One</h3>
+        <div>
+          {
+            blackjack.map((items) => (
+              <img class="element-card" src={`${rootPathOne}${items}.png`} alt=""/>
+            ))
+          }  
+        </div>
+      </div>
+
+      <div class="card-type element-card-two">
+        <h3>Clasic Two</h3>
+        <div>
+          {
+            blackjack.map((items) => (
+              <img class="element-card" src={`${rootPathTwo}${items}.png`} alt=""/>
+            ))
+          }  
+        </div>
+      </div>
+
+      <div class="card-type element-card-fantasy">
+        <h3>Fantasy</h3>
+        <div>
+          {
+            blackjack.map((items) => (
+              <img class="element-card" src={`${rootPathFantasy}${items}.png`} alt=""/>
+            ))
+          }  
+        </div>
+      </div>
+    </section>
+</MainLayout>
